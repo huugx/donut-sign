@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+}
+
+.wallet {
+    height: 30px;
+    margin: 10px;
+    float:right;
+    display : flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(216, 216, 216);
+}
+
+.connect-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.address-container {
+    height: 30px;
+    text-align: right;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(240, 240, 240);
+    vertical-align: middle;
+}
+
+.nav {
+    width: 100%;
+}
+.jazz-icon {
+    width: 20px;
+    padding: 6px;
+    height: 10px;
+    float: right;
+    vertical-align: middle;
+}
+
+.short-address {
+    line-height: 30px;
+    padding-left: 10px;
+    float: left;
+    text-align: right;
+}
+
+.donut-bal {
+    line-height: 30px;
+    margin-left:auto;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+}

@@ -1,0 +1,85 @@
+.content {
+    width: 100%;
+    background-color: #fff;
+    margin: auto;
+}
+
+.network-account {
+    text-align: right;
+}
+
+.centered {
+    width: 585px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.light-background {
+    display: block;
+    overflow: hidden;
+    padding: 20px;
+    background-color: rgba(255, 79, 196, 0.212);
+    border-radius: 15px;
+}
+
+.loader {
+    height: 100px;
+    -webkit-animation:spin 6s linear infinite;
+    -moz-animation:spin 6s linear infinite;
+    animation:spin 6s linear infinite;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+.disclaimer-title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.disclaimer-body {
+    padding-top: 10px;
+    line-height: 130%;
+}
+
+.modal {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal-content {
+    width: 500px;
+    background-color: #FFF;
+}
+
+.modal-header, .modal-footer {
+    padding: 10px;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.modal-body {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
