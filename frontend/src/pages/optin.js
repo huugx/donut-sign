@@ -140,10 +140,17 @@ class Optin extends React.Component {
             })
             return true;
         } else {
-            this.setState({
-                error: sig.error,
-                isSigning: false
-            });
+            if (4001) {
+                this.setState({
+                    error: "User denied message signature.",
+                    isSigning: false
+                });
+            } else {
+                this.setState({
+                    error: sig.error,
+                    isSigning: false
+                });
+            }
             return false;
         }
     }
@@ -196,11 +203,8 @@ class Optin extends React.Component {
                         <p>The distribution chain has been changed to {this.state.value} </p>
                     </Modal>
                 </div>
-            
-                 <div className="centered">
-                    <Greeting user={this.state.username} />
-                    <br></br>
-                </div>
+
+                <Greeting user={this.state.username} />
 
                 <ToggleSwitch checked={this.state.toggle} onChange={this.changeHandler} />
                 

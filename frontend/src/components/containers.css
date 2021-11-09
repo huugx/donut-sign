@@ -1,7 +1,6 @@
 .content {
     width: 100%;
     background-color: #fff;
-    margin: auto;
 }
 
 .network-account {
@@ -15,14 +14,22 @@
     padding: 20px;
 }
 
-.light-background {
-    display: block;
+/* Error */
+.alert-error {
+    width: 330px;
+    height: 45px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    /* padding: 20px;   */
+    color:rgb(216, 0, 0);
+    line-height: 45px;
+    background-color: hsla(0, 100%, 50%, 0.1);
     overflow: hidden;
-    padding: 20px;
-    background-color: rgba(255, 79, 196, 0.212);
     border-radius: 15px;
 }
 
+/* Spinning Donut Loader */
 .loader {
     height: 100px;
     -webkit-animation:spin 6s linear infinite;
@@ -42,6 +49,15 @@
     } 
 }
 
+/* Disclaimer Box */
+.light-background {
+    display: block;
+    overflow: hidden;
+    padding: 20px;
+    background-color: rgba(255, 79, 196, 0.15);
+    border-radius: 15px;
+}
+
 .disclaimer-title {
     font-size: larger;
     font-weight: bold;
@@ -52,6 +68,8 @@
     line-height: 130%;
 }
 
+
+/* Popup */
 .modal {
     position: fixed;
     left: 0px;
@@ -63,23 +81,27 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 100;
 }
 
-.modal-content {
-    width: 500px;
+.modal-content { 
+    width: 545px;
     background-color: #FFF;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .modal-header, .modal-footer {
-    padding: 10px;
+    /* padding: 20px; */
 }
 
 .modal-title {
+    font-size: larger;
+    font-weight: bold;
     margin: 0;
 }
 
 .modal-body {
-    padding: 10px;
+    line-height: 130%;
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }

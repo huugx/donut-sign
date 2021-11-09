@@ -5,8 +5,8 @@ export const ErrorMessage = ({ message }) => {
     if (!message) return null;
   
     return (
-      <div className="alert alert-error">
-        <span>{message}</span>
+      <div className="alert-error">
+        <span>🚫 {message}</span>
       </div>
     );
   }
@@ -18,7 +18,7 @@ export const Modal = (props) => {
     <div className="modal" onClick={props.onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
-          <h2 className="modal-title">{props.title}</h2>
+          <p className="modal-title">{props.title}</p>
         </div>
         <div className="modal-body" >{props.children}</div>
         {props.button !== "" ? 
@@ -43,6 +43,7 @@ export const Connect = () => {
 export const Greeting = (props) => {
   return(
     <div className="centered">
+      {/* {props.user !== "" ? <h2>Welcome, u/{props.user}. <br />Pick your favorite Donut flavor!</h2> : <h2>Select your preferred Donut flavor.</h2> } */}
       {props.user !== "" ? <h2>Welcome, u/{props.user}. <br />Pick your favorite Donut flavor!</h2> : <h2>Select your preferred Donut flavor.</h2> }
     </div>
   )
@@ -54,7 +55,7 @@ export const Disclaimer = () => {
       <div className="light-background">
           <div className="disclaimer-title">Distribution Chain Info</div>
           <div className="disclaimer-body">Change of the distribution chain will take effect for the next distribution period. 
-              Please be aware that if you choose to receive your rewards on the Ethereum Mainnet, you will be required to pay gas fees for claiming, which
+              Please be aware that if you choose to receive your rewards on the Ethereum mainnet, you will be required to pay gas fees for claiming, which
               can be quite high right now!</div>
       </div>
     </div>
