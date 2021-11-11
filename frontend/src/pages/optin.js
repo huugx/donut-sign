@@ -5,6 +5,7 @@ import axios from "axios";
 import { SignMessage, VerifyMessage } from "../components/wallet/signature";
 import { ToggleSwitch } from "../components/toggleswitch";
 
+axios.defaults.baseURL = "https://ethtrader-optin-chain.herokuapp.com/";
 
 class Optin extends React.Component {
 
