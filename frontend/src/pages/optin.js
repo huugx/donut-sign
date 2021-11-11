@@ -6,6 +6,7 @@ import { SignMessage, VerifyMessage } from "../components/wallet/signature";
 import { ToggleSwitch } from "../components/toggleswitch";
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
+console.log(axios.defaults.baseURL);
 
 class Optin extends React.Component {
 
