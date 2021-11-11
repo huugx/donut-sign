@@ -5,8 +5,7 @@ import axios from "axios";
 import { SignMessage, VerifyMessage } from "../components/wallet/signature";
 import { ToggleSwitch } from "../components/toggleswitch";
 
-axios.defaults.baseURL = "https://ethtrader-optin-chain.herokuapp.com";
-// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
 class Optin extends React.Component {
 
@@ -62,14 +61,14 @@ class Optin extends React.Component {
 
         await axios.get('/api/user', config)
         .then((response) => {
-            if (!response.data.length) {
-                console.log('no user found');
+            if(!response.data.length) {
+                // console.log('no user found');
                 this.setState({
                     isAddressNew: true
                 })
             } else {
                 const data = response.data;
-                console.log(data)
+                // console.log(data)
                 this.setState({ 
                     user: data,
                     username: data[0].username,

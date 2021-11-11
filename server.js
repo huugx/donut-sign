@@ -10,12 +10,13 @@ dotenv.config()
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
-app.use("/", require("./routes/api"))
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  });
+    res.header( 'Access-Control-Allow-Origin', process.env.CORS_ALLOW_ORIGIN);
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();  
+});
 
 app.get('/', (req, res) => {
     res.send("Server running")
@@ -40,6 +41,20 @@ app.get('/api/user', function(req,res) {
         .catch((error) => {
             console.log('error: ', daerrorta);
         });
+})
+
+app.post("/api/save", function(req,res) {
+    const data = req.body; 
+    console.log('Body: ', data);
+    const query = {'address': req.body.address};
+
+
+    User.findOneAndUpdate(query, data, {upsert: true, new: true}, function(error, doc) {
+        if (error) {
+            return res.send(500, {error: err});
+        } 
+        return res.send('Succesfully saved.');        
+    });
 })
 
 

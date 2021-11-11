@@ -1,4 +1,4 @@
-export const commaNumber = num => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",").replace(/[^0-9^,^\.]+/g, '');
+export const commaNumber = num => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",").replace(/[^0-9^,^]+/g, '');
 
 export const shortNum = donuts => {
   let val = NaN;
