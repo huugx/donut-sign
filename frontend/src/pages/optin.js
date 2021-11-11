@@ -58,7 +58,7 @@ class Optin extends React.Component {
     getUserData = async () => {
         const config = { params: { address: this.state.currentAddress } };
 
-        await axios.get('/api/user', config)
+        await axios.get('https://ethtrader-optin-chain.herokuapp.com/api/user', config)
         .then((response) => {
             if (!response.data.length) {
                 console.log('no user found');
@@ -175,7 +175,7 @@ class Optin extends React.Component {
         };
 
         axios({
-            url: '/api/save',
+            url: 'https://ethtrader-optin-chain.herokuapp.com/api/save',
             method: 'POST',
             data: payload
         })
