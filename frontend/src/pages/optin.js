@@ -5,7 +5,8 @@ import axios from "axios";
 import { SignMessage, VerifyMessage } from "../components/wallet/signature";
 import { ToggleSwitch } from "../components/toggleswitch";
 
-axios.defaults.baseURL = "https://ethtrader-optin-chain.herokuapp.com/";
+// axios.defaults.baseURL = "https://ethtrader-optin-chain.herokuapp.com";
+// axios.defaults.baseURL = "http://localhost:3001";
 
 class Optin extends React.Component {
 
@@ -57,8 +58,9 @@ class Optin extends React.Component {
 
     getUserData = async () => {
         const config = { params: { address: this.state.currentAddress } };
+        console.log()
 
-        await axios.get('https://ethtrader-optin-chain.herokuapp.com/api/user', config)
+        await axios.get('/api/user', config)
         .then((response) => {
             if (!response.data.length) {
                 console.log('no user found');
@@ -175,7 +177,7 @@ class Optin extends React.Component {
         };
 
         axios({
-            url: 'https://ethtrader-optin-chain.herokuapp.com/api/save',
+            url: '/api/save',
             method: 'POST',
             data: payload
         })
